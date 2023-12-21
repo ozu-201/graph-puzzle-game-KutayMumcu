@@ -1,36 +1,17 @@
 //
-// Created by km029333 on 12/14/2023.
+// Created by km029333 on 12/21/2023.
 //
 
-#include "Edge.h"
+#include <string>
+using namespace std;
 
-Edge::Edge(int from, int to, int weight) {
-    this->from = from;
-    this->to = to;
-    this->weight = weight;
-    next = nullptr;
-}
+class Edge{
+public:
+    string word;
+    Edge* next;
 
-void Edge::setNext(Edge *_next) {
-    next = _next;
-}
-
-Edge *Edge::getNext() const{
-    return next;
-}
-
-int Edge::getFrom() const{
-    return from;
-}
-
-int Edge::getTo() const{
-    return to;
-}
-
-int Edge::getWeight() const{
-    return weight;
-}
-
-Edge::Edge() {
-
-}
+    Edge(string s){
+        this->next = nullptr;
+        this->word = s;
+    }
+};
