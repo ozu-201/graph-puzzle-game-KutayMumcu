@@ -18,6 +18,12 @@ bool onlyOneLetterDifferent(string word1, string word2){
     return count == 1;
 }
 
+void addEdge(Graph graph, string& word1, string& word2){
+    if (onlyOneLetterDifferent(word2,word1)){
+        graph.addEdge(word1,word2);
+    }
+}
+
 int main(){
     ifstream file("C:\\Users\\TEMP\\Downloads\\english-dictionary.txt");
 
@@ -44,6 +50,7 @@ int main(){
     Graph* graph3 = new Graph(count3);
     Graph* graph4 = new Graph(count4);
     Graph* graph5 = new Graph(count5);
+
 
     return 0;
 }
