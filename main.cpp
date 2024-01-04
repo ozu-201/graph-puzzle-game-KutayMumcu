@@ -18,11 +18,32 @@ bool onlyOneLetterDifferent(string word1, string word2){
     return count == 1;
 }
 
-int main() {
+int main(){
     ifstream file("C:\\Users\\TEMP\\Downloads\\english-dictionary.txt");
 
     if (!file.is_open()){
         cout << "file couldn't initialize" << endl;
     }
 
+    int count3;
+    int count4;
+    int count5;
+    string word;
+    while (file >> word){
+        if (word.length() == 3){
+            count3++;
+        }
+        else if (word.length() == 4){
+            count4++;
+        }else if (word.length() == 5){
+            count5++;
+        }
+    }
+    file.close();
+
+    Graph* graph3 = new Graph(count3);
+    Graph* graph4 = new Graph(count4);
+    Graph* graph5 = new Graph(count5);
+
+    return 0;
 }

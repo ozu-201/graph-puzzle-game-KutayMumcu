@@ -10,7 +10,7 @@ public:
     string word;
     Edge* next;
 
-    Edge(string s){
+    Edge(string& s){
         this->next = nullptr;
         this->word = s;
     }
